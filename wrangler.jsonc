@@ -1,0 +1,12 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "do-disconnect-repro",
+	"main": "src/index.ts",
+	"compatibility_date": "2026-09-26",
+	"compatibility_flags": ["enable_request_signal"],
+	"observability": { "enabled": true },
+	"durable_objects": {
+		"bindings": [{ "name": "REPRO", "class_name": "Repro" }],
+	},
+	"migrations": [{ "tag": "v1", "new_sqlite_classes": ["Repro"] }],
+}
